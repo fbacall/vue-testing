@@ -1,28 +1,17 @@
-Vue.component('todo-item', {
-    props: ['todo'],
-    template: '<li>{{ todo.text }}</li>'
-});
-var app7 = new Vue({
-    el: '#app-7',
+var permTable = new Vue({
+    el: '#permission-table',
     data: {
-        groceryList: [
-            { text: 'Vegetables' },
-            { text: 'Cheese' },
-            { text: 'Whatever else humans are supposed to eat' }
+        permissions: [
+            { title: 'Finn', accessType: 4},
+            { title: 'Stuart', accessType: 0},
+            { title: 'Quyen', accessType: 2}
+        ],
+        accessTypes: [
+            { title: 'No access', value: 0 },
+            { title: 'View', value: 1 },
+            { title: 'Download', value: 2 },
+            { title: 'Edit', value: 3 },
+            { title: 'Manage', value: 4 }
         ]
-    }
-});
-
-var vm = new Vue({
-    el: '#example',
-    data: {
-        message: 'Hello'
-    },
-    computed: {
-        // a computed getter
-        reversedMessage: function () {
-            // `this` points to the vm instance
-            return this.message.split('').reverse().join('')
-        }
     }
 });
